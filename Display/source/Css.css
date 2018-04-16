@@ -1,0 +1,72 @@
+body {
+	text-align: center;
+}
+
+/* Chia cot */
+
+.col-1-6 {
+	display: inline-block;
+	width: 16%;
+}
+
+.col-1-5 {
+	display: inline-block;
+	width: 17.5%;
+	margin: 0;
+	padding: 0;
+}
+
+/* Player */
+
+.Pl {
+	border: 1px solid blueviolet;
+	text-align: left;
+	font-weight: bold;
+}
+
+/* San pham */
+
+.P {
+	border: 1px solid goldenrod;
+	text-align: right;
+	font-weight: bold;
+}
+
+/* Nguyen lieu */
+
+.N {
+	border: 1px solid blue;
+	text-align: center;
+	font-weight: bold;
+}
+
+.A {
+	background-color: red;
+}
+
+.B {
+	background-color: orange;
+}
+
+.C {
+	background-color: yellow;
+}
+
+.D {
+	background-color: yellowgreen;
+}
+
+.E {
+	background-color: lightblue;
+}
+
+/* Bang ket qua */
+	#Result {
+		display: inline-block;
+		width: 100%;
+	}
+
+/* Game area */
+	#GameArea{
+		border: 1px solid #000000;
+	}
