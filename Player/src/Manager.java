@@ -108,16 +108,9 @@ public class Manager {
     private String setScence(int a, int b, int c, int d, int e, int f, int g, int h, int i, int k, int l, int m, int n, int o, int p, int q, int r, int s, int t, int u, int w, int x, int y, int z, int aa, int ab, int ac, int ad, int ae, int af, int ag, int ah, int ai, int ak, int al, int am, int an, int ao, int ap, int aq, int ar, int as, int at, int au, String aw, int ax, int ay, int az, int ba, int bb, int bc, int bd, int be, int bf, int bg, int bh, int bi, int bk, int bl, int bm, int bn, int bo, int bp, int bq, int br, int bs, int bt, int bu, int bw, int bv, int bx, int by, int bz, int ca, int cb, int cc, int cd, int ce, int cf, int cg, int ch, int ci) {
         return "{" + "\"a\":\"" + a + "\"," + "\"b\":\"" + b + "\"," + "\"c\":\"" + c + "\"," + "\"d\":\"" + d + "\"," + "\"e\":\"" + e + "\"," + "\"f\":\"" + f + "\"," + "\"g\":\"" + g + "\"," + "\"h\":\"" + h + "\"," + "\"i\":\"" + i + "\"," + "\"k\":\"" + k + "\"," + "\"l\":\"" + l + "\"," + "\"m\":\"" + m + "\"," + "\"n\":\"" + n + "\"," + "\"o\":\"" + o + "\"," + "\"p\":\"" + p + "\"," + "\"q\":\"" + q + "\"," + "\"r\":\"" + r + "\"," + "\"s\":\"" + s + "\"," + "\"t\":\"" + t + "\"," + "\"u\":\"" + u + "\"," + "\"w\":\"" + w + "\"," + "\"x\":\"" + x + "\"," + "\"y\":\"" + y + "\"," + "\"z\":\"" + z + "\"," + "\"aa\":\"" + aa + "\"," + "\"ab\":\"" + ab + "\"," + "\"ac\":\"" + ac + "\"," + "\"ad\":\"" + ad + "\"," + "\"ae\":\"" + ae + "\"," + "\"af\":\"" + af + "\"," + "\"ag\":\"" + ag + "\"," + "\"ah\":\"" + ah + "\"," + "\"ai\":\"" + ai + "\"," + "\"ak\":\"" + ak + "\"," + "\"al\":\"" + al + "\"," + "\"am\":\"" + am + "\"," + "\"an\":\"" + an + "\"," + "\"ao\":\"" + ao + "\"," + "\"ap\":\"" + ap + "\"," + "\"aq\":\"" + aq + "\"," + "\"ar\":\"" + ar + "\"," + "\"as\":\"" + as + "\"," + "\"at\":\"" + at + "\"," + "\"au\":\"" + au + "\"," + "\"aw\":\"" + aw + "\"," + "\"ax\":\"" + ax + "\"," + "\"ay\":\"" + ay + "\"," + "\"az\":\"" + az + "\"," + "\"ba\":\"" + ba + "\"," + "\"bb\":\"" + bb + "\"," + "\"bc\":\"" + bc + "\"," + "\"bd\":\"" + bd + "\"," + "\"be\":\"" + be + "\"," + "\"bf\":\"" + bf + "\"," + "\"bg\":\"" + bg + "\"," + "\"bh\":\"" + bh + "\"," + "\"bi\":\"" + bi + "\"," + "\"bk\":\"" + bk + "\"," + "\"bl\":\"" + bl + "\"," + "\"bm\":\"" + bm + "\"," + "\"bn\":\"" + bn + "\"," + "\"bo\":\"" + bo + "\"," + "\"bp\":\"" + bp + "\"," + "\"bq\":\"" + bq + "\"," + "\"br\":\"" + br + "\"," + "\"bs\":\"" + bs + "\"," + "\"bt\":\"" + bt + "\"," + "\"bu\":\"" + bu + "\"," + "\"bw\":\"" + bw + "\"," + "\"bv\":\"" + bv + "\"," + "\"bx\":\"" + bx + "\"," + "\"by\":\"" + by + "\"," + "\"bz\":\"" + bz + "\"," + "\"ca\":\"" + ca + "\"," + "\"cb\":\"" + cb + "\"," + "\"cc\":\"" + cc + "\"," + "\"cd\":\"" + cd + "\"," + "\"ce\":\"" + ce + "\"," + "\"cf\":\"" + cf + "\"," + "\"cg\":\"" + cg + "\"," + "\"ch\":\"" + ch + "\"," + "\"ci\":\"" + ci + "\"" + "},";
     }
-    
-    /* Tra ve vi tri hien tai 
-     * 0:
-     * 1:
-     * 2:
-     * 3:
-     */
-    
-    private int layVTSanPhamByID(int id) {
-    	for (int i = 0; i < 5; ++i) {
+	
+	private int layVTSanPhamByID(int id) {
+    	for (int i = 0; i < 4; ++i) {
             if (SP_id[i] == id) {
                 return i;
             }
@@ -125,6 +118,13 @@ public class Manager {
     	
     	return -1;
     }
+    
+    /* Tra ve vi tri hien tai 
+     * 0:
+     * 1:
+     * 2:
+     * 3:
+     */
 
     public int layViTri() {
         return VT;
@@ -135,7 +135,7 @@ public class Manager {
      */
     
     public int layIDSanPham(int vt) {
-        if (0 <= vt && vt < 5) {
+        if (0 <= vt && vt < 4) {
             return SP_id[vt];
         }
         return -1;
@@ -146,7 +146,7 @@ public class Manager {
      */
     
     public int layThongTin(int id_SP, int nguyen_lieu) {
-        for (int i = 0; i < 5; ++i) {
+        for (int i = 0; i < 4; ++i) {
             if (SP_id[i] == id_SP) {
                 switch (nguyen_lieu) {
                     case 0: return SP_a[i];
@@ -171,7 +171,7 @@ public class Manager {
 
     public int layTrangThaiSanPham(int id_SP) {
 
-        for (int i = 0; i < 5; ++i) {
+        for (int i = 0; i < 4; ++i) {
             if (SP_id[i] == id_SP) {
                 return SP[i];
             }
@@ -419,12 +419,11 @@ public class Manager {
         player_limit_d = 10;
         player_limit_e = 10;
 
-        SP_id = new int[5];
+        SP_id = new int[4];
         SP_id[0] = 1;
         SP_id[1] = 6;
         SP_id[2] = 7;
         SP_id[3] = 49;
-        SP_id[4] = 55;
         SP_a = new int[5];
         SP_a[0] = 1;
         SP_a[1] = 5;
